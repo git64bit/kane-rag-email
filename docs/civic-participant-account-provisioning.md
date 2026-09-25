@@ -436,7 +436,76 @@ The LXD guest sees the mounted filesystem but does not own the host block device
 
 ---
 
-# 7. Create the private participant record
+# 7. Add the participant to the Civic Participant group
+
+## What
+
+Every ordinary participant UNIX account must be added to the supplemental UNIX group:
+
+```text
+civic-participants
+```
+
+For the first production participant:
+
+```text
+sase25sep26a
+    primary group: sase25sep26a
+    supplemental group: civic-participants
+```
+
+## Where
+
+Host:
+
+```text
+witness-hubzilla
+```
+
+## Why
+
+The `civic-participants` group is the operational class used to apply the ordinary Participant environment consistently.
+
+It provides a stable group target for Usermin Module Restrictions and future participant-scoped configuration without turning each participant into a Webmin administrative user.
+
+Membership in this UNIX group does not itself create Civic standing, governance authority, operator authority, or Signing Node authority.
+
+## How
+
+After the UNIX account exists and its quota has been assigned, add the account to the group:
+
+```bash
+usermod -aG civic-participants <unix-login>
+```
+
+For the first production participant:
+
+```bash
+usermod -aG civic-participants sase25sep26a
+```
+
+Verify:
+
+```bash
+getent group civic-participants
+id sase25sep26a
+```
+
+Expected relationship:
+
+```text
+sase25sep26a
+    primary:      sase25sep26a
+    supplemental: civic-participants
+```
+
+The `-aG` form is important: the participant is appended to the supplemental group without replacing other supplemental memberships.
+
+A participant account that is intended to receive the ordinary Participant Usermin policy but is not a member of `civic-participants` is incompletely provisioned.
+
+---
+
+# 20. Create the private participant record
 
 ## What
 
@@ -841,6 +910,7 @@ The following are provisioning failures:
 - quota not assigned;
 - quota assigned to the wrong shifted UID;
 - quota verification omitted;
+- participant not added to the `civic-participants` supplemental group;
 - private participant record written to public source control;
 - Usermin login not verified;
 - participant terminal unavailable where Terminal is part of the service;
@@ -933,6 +1003,8 @@ real UNIX principal
 private persistent home
 +
 bounded storage entitlement
++
+`civic-participants` operational group membership
 +
 private participant metadata
 +

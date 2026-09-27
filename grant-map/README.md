@@ -131,7 +131,51 @@ WHICH PORT?
 WHICH MANAGEMENT APPLICATION?
 FROM WHICH NETWORK CONTEXT?
 WHAT DOES THAT MANAGEMENT SURFACE CONTROL?
+WHICH BROWSER PROFILE IS AUTHORIZED?
+WHICH CA ROOTS OR CLIENT CERTIFICATES MUST THAT BROWSER HOLD?
 ```
+
+## Browser trust and client authentication are infrastructure
+
+Browser state is part of the access path.
+
+For every browser-managed service, `grant-map` must record the actual browser or browser profile used by the human operator and the trust material required by that browser.
+
+At minimum:
+
+```text
+DEVICE / WORKSTATION:
+OPERATING SYSTEM:
+BROWSER:
+BROWSER PROFILE:
+SERVICE:
+ACCESS CONTEXT:
+SERVER / CA TRUST REQUIRED:
+CLIENT CERTIFICATE REQUIRED:
+CERTIFICATE SUBJECT OR LABEL:
+CERTIFICATE FINGERPRINT:
+EXPIRY:
+PRIVATE KEY LOCATION: never publish; record only where/how it is protected
+VERIFIED:
+```
+
+Two different certificate roles must never be conflated:
+
+```text
+KANE CA TRUST
+    browser trusts Kane-issued server certificates
+    required for Civic services such as the Usermin portal
+
+LXD CLIENT CERTIFICATE
+    browser presents a client identity to LXD
+    required for LXD mutual-TLS management access
+```
+
+Installing the Kane CA in one browser does not enroll another browser. Installing an LXD client certificate in one browser/profile does not authorize another browser/profile.
+
+A service is not considered human-accessible until the required trust/client material is documented for the browser actually used.
+
+See `grant-map/browser-access.md`.
 
 ## Initial mapping target
 

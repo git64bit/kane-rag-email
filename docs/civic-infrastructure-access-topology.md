@@ -72,7 +72,7 @@ Primary use: witness/portal infrastructure and communication with the OVH/public
 | `hubzilla1` | Diagnostics Hubzilla service | public ingress through diagnostics infrastructure | `10.0.0.104` | Record when verified |
 | `orchestrator1` | Diagnostics orchestration | as configured | `10.0.0.105` | Record when verified |
 | `wg-pk.diagnostics.kane-il.us` | Relay between witness fabric and public diagnostics mail path | `198.58.111.109` | `10.110.0.1` | n/a |
-| `annales` | Compute/inference host; physical host of witness-hubzilla | no public service identity recorded here | `10.110.0.9` | Record when verified |
+| `annales` | Compute/inference host; physical host of witness-hubzilla; human management via Webmin | public-library management enters through `wg-pk` Webmin at `198.58.111.109:10000`, then the Webmin Servers Index reaches annales at `10.110.0.9:10000` | `10.110.0.9` | `10.0.0.36:10000` (Webmin) |
 | `witness-hubzilla` | Participant UNIX/Usermin and witness Hubzilla host | through `198.58.111.109` | `10.110.0.19` | LXD/LAN address must be recorded separately |
 | `witness-ipfs` | Witness-side IPFS | through witness/public infrastructure as configured | `10.110.0.20` | Record when verified |
 | `proxmox1` | OVH public transport-plane host | provider/public addressing as configured | `10.110.0.21` | n/a |
@@ -97,7 +97,33 @@ Public access is hostname-based because TLS, DANE and Civic Trust Enrollment are
 
 A participant at a public library should not need to know any LAN or WireGuard address.
 
-## 5. Home-lab operator access
+## 5. Human management is part of host identity
+
+For operator-facing infrastructure, an IP address without its management service is incomplete documentation.
+
+For `annales`, the verified human-management paths are:
+
+```text
+HOME LAB
+    browser
+      -> https://10.0.0.36:10000/
+      -> Webmin on annales
+
+PUBLIC LIBRARY / REMOTE OPERATOR
+    browser
+      -> https://198.58.111.109:10000/
+      -> Webmin on wg-pk
+      -> Webmin Servers Index
+      -> annales at 10.110.0.9:10000
+```
+
+The WireGuard address `10.110.0.9` identifies the host on the witness fabric. The port `:10000` identifies the human management surface. Both are required to make the host operationally discoverable.
+
+The home-LAN address `10.0.0.36` must not be confused with the separate diagnostics WireGuard fabric, which also uses `10.0.0.0/24`. These are different networks with overlapping RFC1918 address space. Every occurrence of a `10.0.0.x` address in documentation must therefore state its network context.
+
+The LXD container-management UI for annales is not yet inventoried. Until it is, annales is only partially documented from the human operator's perspective.
+
+## 6. Home-lab operator access
 
 The operator may use LAN addresses directly when working from the trusted home network.
 
@@ -121,7 +147,7 @@ CIVIC HOST
 
 The LAN inventory must therefore be maintained as a first-class part of this document. A LAN address must not be guessed from a WireGuard address or public DNS record.
 
-## 6. DNS split
+## 7. DNS split
 
 `ingress1` serves two views of `diagnostics.kane-il.us`.
 
@@ -149,7 +175,7 @@ mx1 private policy query
 
 It must not transfer the internal view from `10.0.0.101`.
 
-## 7. Mail path
+## 8. Mail path
 
 Current authoritative mail path:
 
@@ -218,7 +244,7 @@ _mailauth.diagnostics.kane-il.us
 
 Postfix on `mx1` uses the local `kane-mailauth-policy` service to consult that policy.
 
-## 8. Participant SASE25SEP26A
+## 9. Participant SASE25SEP26A
 
 The first production participant demonstrates why identities and hosts must remain separate.
 
@@ -240,7 +266,7 @@ Mail storage
 
 The UNIX account and mailbox belong to the same participant but are not the same system account.
 
-## 9. Addressing rule for future documentation
+## 10. Addressing and management rule for future documentation
 
 Every host document and every operational procedure should identify addresses using the same four fields:
 
@@ -249,6 +275,7 @@ PUBLIC:
 LAN:
 WIREGUARD:
 SERVICE NAMES:
+HUMAN MANAGEMENT:
 ```
 
 Use `not applicable` or `not yet verified` instead of leaving the reader to infer an address.
@@ -265,7 +292,7 @@ HOST: annales
 
 That convention is mandatory for this repository because several public names terminate on relays rather than on the machine whose service they expose.
 
-## 10. Buildability test
+## 11. Buildability test
 
 A new operator should be able to answer these questions from this document alone:
 
@@ -275,5 +302,7 @@ A new operator should be able to answer these questions from this document alone
 4. Is the public DNS name a service endpoint, a relay, or the machine itself?
 5. Which IP address is appropriate for this access context?
 6. Which host receives the next configuration command?
+7. Which URL/port does a human operator use to manage that host?
+8. If the host runs containers/VMs, what human interface manages those guests?
 
 If any answer requires reconstructing the topology from shell history, the documentation is incomplete.

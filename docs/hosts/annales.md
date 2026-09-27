@@ -75,7 +75,19 @@ This gives a human operator a remote control path even when the home-LAN address
 
 ## LXD management
 
-Status: **not yet inventoried sufficiently**.
+Status: **LAN UI reachable; browser trust/client enrollment not yet complete.**
+
+Verified LAN UI:
+
+```text
+https://10.0.0.36:8443/
+```
+
+A Chrome-on-Linux browser has reached the Canonical LXD UI login/enrollment page at that address.
+
+The UI currently requires browser-side mutual-TLS enrollment. The browser must have an LXD client certificate installed before it becomes an authenticated human-management surface.
+
+The visible browser session also currently reports the connection as not trusted/secure, so server trust for this access path must be documented and resolved separately from client authentication.
 
 The host runs Ubuntu LXD, but the repository does not yet record the human web interface for managing LXD instances.
 
@@ -85,8 +97,12 @@ Required inventory:
 LXD VERSION:
 LXD HTTPS API ADDRESS:
 LXD WEB UI URL:
-LXD TRUST/AUTH METHOD:
-HOME-LAB ACCESS PATH:
+LXD TRUST/AUTH METHOD: browser client certificate / mutual TLS
+HOME-LAB ACCESS PATH: https://10.0.0.36:8443/
+AUTHORIZED BROWSER/PROFILE:
+SERVER TRUST STATE:
+CLIENT CERTIFICATE STATE:
+
 REMOTE/WIREGUARD ACCESS PATH:
 INSTANCE LIST:
 STORAGE POOLS:
@@ -95,6 +111,22 @@ PROFILES:
 ```
 
 Until these fields are filled, the LXD layer is not considered fully documented.
+
+### Browser dependency
+
+For annales, the browser is itself part of the management path.
+
+```text
+Webmin
+    requires browser trust appropriate to the Webmin certificate/path
+
+LXD UI
+    requires:
+      1. server trust in the browser
+      2. an LXD client certificate in that browser/profile
+```
+
+The repository must identify the actual browser/profile used on the home LAN. Browser trust cannot be assumed to transfer between Chrome, Firefox, another workstation, or another browser profile.
 
 ## Known instance
 

@@ -140,3 +140,37 @@ HUMAN
 ```
 
 If any link is undocumented, human access is not fully mapped.
+
+
+## Verified LXD identity on annales
+
+The LXD server already contains a trusted TLS identity for the browser UI:
+
+```text
+IDENTITY NAME:
+    lxd-ui
+
+AUTHENTICATION METHOD:
+    tls
+
+TYPE:
+    Client certificate
+
+GROUP:
+    admins
+
+IDENTIFIER / SHA-256 FINGERPRINT:
+    7d9e9dd831f457a754d31b1417c1ca9def9e1fa3d3b125a29ad7a49ddda039a4
+
+CERTIFICATE LABEL / SUBJECT ORGANIZATION:
+    LXD UI 10.0.0.36 (Browser Generated)
+
+VALIDITY:
+    2026-05-10 through 2029-02-03
+```
+
+This proves that annales already trusts that specific client certificate. It does **not** prove that the current Chrome profile still holds the corresponding certificate and private key.
+
+The next verification point is therefore browser-side: confirm that the current Chrome/Linux profile contains the client certificate whose SHA-256 fingerprint matches the LXD identity above.
+
+Do not delete or recreate the `lxd-ui` identity merely because a second enrollment attempt reports that the name already exists.

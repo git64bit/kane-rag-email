@@ -51,9 +51,11 @@ The architecture is legible enough that another bounded group can understand the
 
 ### EXPAND
 
-Expansion means replication of deliberately bounded Civic projects, not unbounded accumulation of users.
+Expansion means replication of deliberately bounded Civic projects, not unbounded accumulation of accounts.
 
-The reusable unit is the Civic Infrastructure pattern: deliberate participation, project qualification, bounded trust, explicit relationship semantics, human-operable services, and evidence-based operation.
+The Civic Infrastructure has **participants**, not users. Growth is measured by productive participation, useful contributed capacity, and—where resources and responsibilities permit—additional qualified **owner-operators**.
+
+The reusable unit is the Civic Infrastructure pattern: deliberate participation, project qualification, bounded trust, explicit relationship semantics, human-operable services, evidence-based operation, and a path from participation to owner-operated capacity.
 
 ---
 
@@ -61,7 +63,7 @@ The reusable unit is the Civic Infrastructure pattern: deliberate participation,
 
 The Grant exists to make the Civic Infrastructure not merely functional, but sufficiently desirable, legible, trustworthy, and reproducible that people and groups with useful surplus capacity can confidently direct that capacity toward consequential civic work.
 
-The Civic Infrastructure is not optimized for free accounts, instant gratification, passive consumption, maximum user count, or indiscriminate growth.
+The Civic Infrastructure is not optimized for free accounts, instant gratification, passive consumption, maximum account count, or indiscriminate growth.
 
 Its economic premise is different.
 
@@ -109,6 +111,46 @@ productive civic participation
 ```
 
 The Grant supports the quality of that mechanism. It does not subsidize passive consumption.
+
+---
+
+## Participants and owner-operators
+
+The Civic Infrastructure has **participants**, not users.
+
+A participant deliberately enters a bounded Civic project and may contribute effort, knowledge, equipment, compute, storage, administration, physical capacity, or other productive resources.
+
+A software product may internally use the word `user`. That term does not define the Civic relationship.
+
+A participant who contributes sufficient resources and accepts sufficient operational responsibility to own or control and operate a qualified Civic Infrastructure node or service is an **owner-operator**.
+
+Owner-operation is an operational role, not a grant of Civic standing or governance authority.
+
+The Civic Infrastructure does not require every participant to become an owner-operator. It preserves the path for any qualified participant with sufficient resources, competence, and commitment to contribute at that level.
+
+This changes the expansion model:
+
+```text
+not:
+one service
+    ↓
+more accounts
+    ↓
+larger centralized service
+
+but:
+bounded Civic project
+    ↓
+active participants
+    ↓
+contributed surplus capacity
+    ↓
+qualified owner-operators
+    ↓
+additional operated capacity and resilience
+```
+
+The infrastructure therefore favors active participation and distributed productive capacity over passive account accumulation.
 
 ---
 
@@ -208,6 +250,25 @@ Blockchain, cryptocurrency, or token mechanisms are not part of the Civic Infras
 They are admitted only when a concrete Civic Infrastructure function is evidenced and the technology productively performs that function.
 
 A technology admitted for civic purposes may also prove useful for advocacy or activist projects. That secondary usefulness does not redefine the purpose of the infrastructure.
+
+### Technology admission in practice: Hubzilla
+
+Hubzilla is the first documented technology-admission case study.
+
+It is admitted because a combination of its capabilities maps directly to evidenced Civic Infrastructure requirements, including:
+
+- bounded participant-facing realms and access control,
+- owner-operated deployment,
+- nomadic identity,
+- cloning and recoverability,
+- add-on capacity without requiring a private platform fork,
+- controlled interoperability, including ActivityPub support,
+- rich and durable publication,
+- and relationship-aware permissions.
+
+Hubzilla is not the Civic Infrastructure and does not create participation, qualification, Affected Status, Same and Equal status, Civic standing, or governance authority.
+
+Its role and admission reasoning are documented in `grant-map/HUBZILLA.md`.
 
 ---
 
@@ -457,7 +518,7 @@ Civic Infrastructure CA
             +-- Kane project service certificates
 ```
 
-An intermediate CA represents a deliberately bounded Civic project, not merely another collection of user accounts.
+An intermediate CA represents a deliberately bounded Civic project, not merely another collection of accounts.
 
 Browser trust in a project CA establishes technical trust in project-issued services. It does not confer participation, project qualification, current status, affected status, Same and Equal status, Civic standing, or authority.
 

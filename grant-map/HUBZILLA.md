@@ -143,7 +143,55 @@ It creates an operational role.
 
 ---
 
-# 4. Civic requirement: bounded project surface
+# 4. Civic requirement: provisional intake before participation
+
+Hubzilla is the public registration and provisional intake surface for the Kane Civic Infrastructure.
+
+Registration is approval-only.
+
+A registration request does not by itself create a Civic participant.
+
+The onboarding states are:
+
+```text
+VISITOR
+    ↓
+REGISTRATION REQUEST
+    ↓
+ADMINISTRATIVE APPROVAL
+    ↓
+PROVISIONAL HUBZILLA ACCOUNT
+    ↓
+VALID NEW OR EXISTING SASE
+    ↓
+PROJECT QUALIFICATION
+    ↓
+CIVIC PARTICIPANT
+    ↓
+USERMIN + PARTICIPANT RESOURCES
+```
+
+The registration form asks the applicant to explain why and how they wish to participate.
+
+That statement of intent supports review of the registration request but does not replace the SASE participation gate.
+
+Approved Hubzilla registrations remain provisional until backed by a valid new or existing SASE.
+
+Provisional registrations without a valid SASE are removed on the established recurring cleanup schedule.
+
+Hubzilla therefore performs intake and provisional presence.
+
+SASE establishes deliberate participation.
+
+Project qualification establishes eligibility.
+
+Usermin issuance allocates the participant's deeper Civic resources.
+
+These functions are deliberately separate.
+
+---
+
+# 5. Civic requirement: bounded project surface
 
 A Civic project must be deliberately bounded.
 
@@ -177,7 +225,7 @@ Hubzilla is admitted because it can participate in enforcing that separation rat
 
 ---
 
-# 5. Civic requirement: participant continuity independent of one host
+# 6. Civic requirement: participant continuity independent of one host
 
 A Civic participant's identity and civic presence should not be conceptually identical to one particular machine.
 
@@ -213,7 +261,7 @@ Those should not be confused.
 
 ---
 
-# 6. Civic requirement: cloning and recoverability
+# 7. Civic requirement: cloning and recoverability
 
 Hubzilla allows a channel to be cloned to another Hubzilla hub.
 
@@ -239,7 +287,7 @@ That capability is sufficient to make cloning materially relevant to Civic Infra
 
 ---
 
-# 7. Civic requirement: reduce unnecessary operator dependence
+# 8. Civic requirement: reduce unnecessary operator dependence
 
 The Civic Infrastructure does not claim that Hubzilla prevents de-platforming, moderation, server failure, administrative error, or loss of access.
 
@@ -265,7 +313,7 @@ They do not eliminate every dependency.
 
 ---
 
-# 8. Civic requirement: extend function without creating a private platform fork
+# 9. Civic requirement: extend function without creating a private platform fork
 
 The Civic Infrastructure is intentionally kept small.
 
@@ -295,7 +343,7 @@ The value is that the Civic Infrastructure can add a bounded function without tu
 
 ---
 
-# 9. Civic requirement: interoperability without surrendering project boundaries
+# 10. Civic requirement: interoperability without surrendering project boundaries
 
 A bounded Civic project still needs controlled communication with the outside world.
 
@@ -333,7 +381,7 @@ ActivityPub or other federation support does not confer SASE participation, proj
 
 ---
 
-# 10. Civic requirement: rich and durable publication
+# 11. Civic requirement: rich and durable publication
 
 Civic activity cannot always be reduced to short posts, ephemeral chat, or simple email.
 
@@ -381,7 +429,7 @@ No one component is expected to perform every function.
 
 ---
 
-# 11. Civic requirement: permissions and relationship-aware access
+# 12. Civic requirement: permissions and relationship-aware access
 
 The Civic Infrastructure contains relationships that are not interchangeable.
 
@@ -410,7 +458,7 @@ Hubzilla permissions are one mechanism for enforcing the resulting access decisi
 
 ---
 
-# 12. Civic requirement: participant-owned publication surface
+# 13. Civic requirement: participant-owned publication surface
 
 An owner-operated Hubzilla node has another useful property: the publication surface can be hosted under infrastructure controlled by the participant or bounded group rather than solely under a third-party platform.
 
@@ -426,7 +474,7 @@ The value is operational control, not ideological decentralization.
 
 ---
 
-# 13. What Hubzilla is not
+# 14. What Hubzilla is not
 
 Hubzilla must not be allowed to redefine the Civic Infrastructure.
 
@@ -452,7 +500,7 @@ The application remains subordinate to the Civic Infrastructure's participation,
 
 ---
 
-# 14. Why Hubzilla is admitted
+# 15. Why Hubzilla is admitted
 
 Hubzilla is admitted because one platform provides a combination of capabilities that map directly to evidenced Civic Infrastructure needs:
 
@@ -474,7 +522,7 @@ The value is the combination.
 
 ---
 
-# 15. Owner-operator expansion model
+# 16. Owner-operator expansion model
 
 The Hubzilla role in Civic Infrastructure expansion is not:
 
@@ -515,7 +563,7 @@ It does, however, preserve a path for any qualified participant with sufficient 
 
 ---
 
-# 16. Technology neutrality remains intact
+# 17. Technology neutrality remains intact
 
 Hubzilla's admission is conditional on utility.
 
@@ -529,7 +577,7 @@ This is the same rule that governs blockchain, tokens, AI systems, distributed s
 
 ---
 
-# 17. Grant relevance
+# 18. Grant relevance
 
 Hubzilla demonstrates the technology-admission discipline in concrete form.
 
@@ -568,7 +616,7 @@ Hubzilla is therefore evidence of the Civic Infrastructure's selection disciplin
 
 ---
 
-# 18. Evidence boundary
+# 19. Evidence boundary
 
 This document distinguishes Hubzilla's documented capabilities from the verified state of the Kane deployment.
 

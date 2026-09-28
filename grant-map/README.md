@@ -8,6 +8,191 @@ This top-level tree exists for one purpose only:
 
 It is not an application-development area, a RAG design area, a security-policy notebook, or a general architecture discussion.
 
+
+## Project priorities
+
+The operated Civic Infrastructure is developed and presented according to four priorities, in decreasing order:
+
+1. **IMPRESS**
+2. **FUNCTION**
+3. **INSPIRE**
+4. **EXPAND**
+
+These are not interchangeable.
+
+**IMPRESS** comes first because the infrastructure must be visibly understandable and compelling to a human observer. A working browser trust relationship, a recognizable county service identity, a usable portal, and a clearly mapped management path have demonstration value that source code alone does not provide.
+
+**FUNCTION** comes next: the impressive surface must perform useful civic work for an actual participant and operator.
+
+**INSPIRE** means another county, association, or civic group should be able to see the pattern and understand how it could be reproduced.
+
+**EXPAND** comes last. Expansion does not mean dissolving the Kane County boundary into a general-purpose network. The preferred expansion model is replication: another county can construct its own bounded infrastructure from the same pattern.
+
+## Deliberate county boundary
+
+The Civic Infrastructure is intentionally constrained to a **single county**. This is a design feature, not an unfinished scalability problem.
+
+The county boundary is established by several independent mechanisms. No single mechanism is expected to prove every kind of eligibility, identity, standing, or authority.
+
+The boundary is layered:
+
+```text
+COUNTY
+  |
+  +-- COUNTY CA
+  |     county-specific technical trust domain
+  |
+  +-- SASE
+  |     deliberate physical participation / delivery-point evidence
+  |
+  +-- CURRENT RESIDENT
+  |     present relationship to an eligible local residence
+  |
+  +-- AFFECTED STATUS
+  |     present relationship to the institution or issue
+  |
+  +-- DNS / MAIL WHITELIST
+  |     county-contained communications by default
+  |     explicit exceptions do not create participation
+  |
+  +-- SAME AND EQUAL
+        issue-specific peer relationship inside one Association
+```
+
+### County CA
+
+The County CA establishes the county-specific technical trust environment.
+
+For Kane, the service hierarchy is:
+
+```text
+Civic Infrastructure Root CA
+    -> Civic Infrastructure Kane County IL CA
+    -> county service certificates
+```
+
+Browser trust in the Kane County service hierarchy does **not** by itself establish residency, homeowner status, affected status, participant standing, or governance authority. It establishes that the human browser deliberately recognizes services issued by this Civic Infrastructure.
+
+Another county should normally reproduce the pattern with its own county-specific trust domain rather than being absorbed into Kane's operational trust domain.
+
+### SASE
+
+The Self-Addressed Stamped Envelope is an intentional participation gate tied to a physical delivery point.
+
+Its purpose is not to prove a person's permanent legal identity. It provides practical evidence that someone can receive and return material through the relevant physical address and is willing to perform a small observable act to participate.
+
+SASE therefore contributes evidence of local participation without turning the infrastructure into an identity-provider system.
+
+### CURRENT RESIDENT
+
+**CURRENT RESIDENT** is deliberately present-tense.
+
+The infrastructure is concerned with the current relationship between a participant and an eligible residence, not with creating a permanent person record that follows an individual forever.
+
+A former resident and a current resident are therefore not interchangeable merely because both once had a relationship to the same property.
+
+### Affected Status
+
+**Affected Status** asks whether a person is presently affected by the institution, rule, event, or issue under discussion.
+
+It is separate from browser trust, email access, SASE evidence, and general participation.
+
+A person may be able to communicate with the infrastructure without having Affected Status for a particular matter. Likewise, an explicit external communication exception does not manufacture Affected Status.
+
+### DNS whitelist and explicit exceptions
+
+Communications are deliberately county-contained by default.
+
+The current mail design permits the normal Civic communications namespace under:
+
+```text
+*.diagnostics.kane-il.us
+```
+
+and rejects unapproved external origins by default.
+
+Explicit exceptions may be created for legitimate outside correspondents, such as grant trustees or other deliberately authorized parties. Those exceptions are communication exceptions only.
+
+```text
+EXTERNAL EXCEPTION
+    != CURRENT RESIDENT
+    != AFFECTED STATUS
+    != SAME AND EQUAL
+    != CIVIC STANDING
+```
+
+An outside correspondent may communicate with the system without becoming a Kane participant.
+
+### Same and Equal
+
+**Same and Equal** is not a general statement that all participants are equivalent.
+
+It is a narrow relationship test for discussion of an HOA issue.
+
+Two people are **Same and Equal** only when they occupy the same current homeowner relationship inside the **same Association** for the matter being discussed.
+
+Examples:
+
+```text
+current homeowner + current homeowner
+same Association
+    -> SAME AND EQUAL
+
+current homeowner + current homeowner
+different Associations
+    -> NOT SAME AND EQUAL
+
+current homeowner + former homeowner
+same Association
+    -> NOT SAME AND EQUAL
+
+homeowner + Board member
+same Association
+    -> NOT SAME AND EQUAL
+```
+
+The Board-member example matters because the Board member occupies an institutional/governance role relative to the homeowner. Shared property ownership does not erase that asymmetry.
+
+The county infrastructure may therefore contain many Associations without turning them into one undifferentiated county-wide peer forum.
+
+```text
+KANE COUNTY CIVIC INFRASTRUCTURE
+    |
+    +-- Association A
+    |     current homeowner <-> current homeowner
+    |              SAME AND EQUAL
+    |
+    +-- Association B
+    |     current homeowner <-> current homeowner
+    |              SAME AND EQUAL
+    |
+    +-- cross-Association discussion
+          may be useful
+          but is NOT Same and Equal
+```
+
+### Boundary principle
+
+The county boundary is therefore not simply:
+
+```text
+users who happen to live in Kane County
+```
+
+It is a deliberately limited civic environment composed of:
+
+```text
+county-specific technical trust
++ physical participation evidence
++ current-resident relationship
++ issue-specific affected status
++ county-contained communications by default
++ explicit exceptions that do not confer participation
++ Same-and-Equal peer discussion only where the relationship actually matches
+```
+
+This boundary must remain visible in `grant-map` because the human operator needs to understand not only **where** infrastructure runs, but also **why the infrastructure is intentionally bounded the way it is**.
+
 The map must allow a competent human operator who did not build the system to answer:
 
 1. What logical Civic nodes exist?

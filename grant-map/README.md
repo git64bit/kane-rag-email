@@ -1,17 +1,24 @@
-
 # grant-map
 
 ## Purpose
 
-This top-level tree exists to make the Kane Civic Infrastructure understandable, operable, demonstrable, and reproducible by humans.
+`grant-map` defines and documents the Civic Infrastructure as it exists and operates.
 
-Its immediate job is to map the live infrastructure for human access, operation, reconstruction, recovery, and management. Its grant-facing job is equally important: show how a deliberately bounded Civic Infrastructure can become not merely functional, but highly desirable to many different groups that have useful spare capacity to contribute.
+Its purpose is to make the infrastructure understandable, operable, demonstrable, recoverable, and reproducible by humans. It records the live technical topology, the human participation model, the trust model, the economic and logistical principles, and the operational boundaries that govern the system.
 
-This is not an application-development scratchpad, a generic RAG design area, a security-policy notebook, or a collection of disconnected host notes.
+This README contains finalized design facts and verified operating facts. It is not a roadmap, backlog, application-development scratchpad, generic RAG design area, or collection of speculative use cases.
 
-The map must explain both how the system works and why the system is deliberately designed this way.
+The Civic Infrastructure is designed so that a competent human who did not build it can understand:
 
-A competent human operator who did not build the system should be able to reconstruct its topology, reach its management surfaces, understand its trust boundaries, and see how the same pattern could support another bounded Civic project.
+- what the infrastructure is,
+- what it is not,
+- how participation is established,
+- how bounded Civic projects are distinguished,
+- how trust is established,
+- how actual institutional and technical behavior is exposed,
+- how finite resources move through a system,
+- how useful surplus capacity can be directed toward consequential work,
+- and how the live infrastructure is reached and managed.
 
 ---
 
@@ -24,49 +31,49 @@ The Civic Infrastructure is developed and presented according to four priorities
 3. **INSPIRE**
 4. **EXPAND**
 
-These priorities are deliberate.
+### IMPRESS
 
-### 1. IMPRESS
+The infrastructure is visibly coherent, understandable, and demonstrable to a human observer.
 
-The infrastructure must first be visibly coherent, understandable, and compelling to a human observer.
+A reviewer can see real trust relationships, recognizable service identities, deliberate participation gates, working human-management surfaces, and an architecture that can be explained from evidence rather than hand-waving.
 
-A reviewer should be able to see a real trust hierarchy, a working portal, recognizable service identities, deliberate participation gates, understandable human-management paths, and a live system whose architecture can be explained without hand-waving.
+Source code alone is not the Civic Infrastructure.
 
-Source code alone does not accomplish this.
+### FUNCTION
 
-### 2. FUNCTION
+The infrastructure performs useful work.
 
-The impressive surface must perform useful work.
+Its services support real communication, evidence, diagnostics, participation, administration, trust, recovery, and resource coordination.
 
-Participants and operators must be able to use the system for real communications, evidence, diagnostics, participation, recovery, and administration. Demonstration value without practical utility is not enough.
+### INSPIRE
 
-### 3. INSPIRE
+The architecture is legible enough that another bounded group can understand the pattern and evaluate it for its own purpose.
 
-The design should make another group say: We could use this pattern for our own bounded community.
+### EXPAND
 
-That group does not need to be another condominium association or another county. The architecture should be legible enough that a maker community, an industry group, a statewide sector, or a qualification-based community can understand how to reproduce the pattern under its own rules.
+Expansion means replication of deliberately bounded Civic projects, not unbounded accumulation of users.
 
-### 4. EXPAND
-
-Expansion comes last.
-
-Expansion does not mean turning Kane into an unlimited general-purpose social network or maximizing account creation. Expansion means that the design becomes easy to reproduce for other deliberately bounded projects.
-
-The preferred growth model is replication of bounded projects, not unbounded accumulation of users.
+The reusable unit is the Civic Infrastructure pattern: deliberate participation, project qualification, bounded trust, explicit relationship semantics, human-operable services, and evidence-based operation.
 
 ---
 
-## What the Grant is intended to accomplish
+## Grant purpose
 
-The Grant is intended to make this design not only operational, but **desirable enough that many different groups will want to adopt, reproduce, contribute to, or extend it**.
+The Grant exists to make the Civic Infrastructure not merely functional, but sufficiently desirable, legible, trustworthy, and reproducible that people and groups with useful surplus capacity can confidently direct that capacity toward consequential civic work.
 
-The objective is not to attract the largest possible number of people because access is free, instant, or frictionless.
+The Civic Infrastructure is not optimized for free accounts, instant gratification, passive consumption, maximum user count, or indiscriminate growth.
 
-The project is specifically not optimized around the conventional Internet growth model of free accounts, immediate access, passive consumption, and maximum user count.
+Its economic premise is different.
 
-Instead, it is intended to attract people and groups that possess **spare capacity** and are willing to contribute some of it.
+There are individuals and groups who already possess useful ability, motivation, knowledge, equipment, time, attention, compute, storage, organizational reach, physical space, workshop capability, logistical ability, or other productive capacity. Much of that capacity is underused not because its holders are unwilling to contribute, but because they lack a direction they consider sufficiently credible, bounded, consequential, and trustworthy.
 
-Spare capacity can include:
+The Civic Infrastructure provides that direction.
+
+### Surplus capacity
+
+**Surplus capacity** is productive human, technical, physical, organizational, or economic capability that exists beyond its present use and whose holder is willing to employ it when a sufficiently credible and meaningful direction is available.
+
+This capacity can include:
 
 - time,
 - technical skill,
@@ -84,22 +91,251 @@ Spare capacity can include:
 - attention,
 - and patience.
 
-The useful participant is therefore not merely someone looking for another free service. The useful participant has some capacity that is presently underused and can be redirected toward a bounded civic purpose.
+The relevant problem is therefore not always lack of willingness or lack of resources.
 
-The Grant should improve the parts of the system that make this participation attractive:
+In many cases the limiting resource is the absence of a trusted mechanism through which existing willingness and productive surplus can be applied consequentially.
 
-- better human-facing interfaces,
-- clearer onboarding,
-- stronger demonstrations,
-- easier replication,
-- better documentation,
-- easier recovery,
-- understandable trust,
-- usable participant services,
-- visible evidence of contribution,
-- and a coherent path from interest to meaningful participation.
+The Civic Infrastructure converts that condition into an operational relationship:
 
-The intended result is a system that people with useful spare capacity want to join because participation is consequential, not because the service is costless.
+```text
+existing ability
++ existing willingness
++ underused productive capacity
++ trusted direction
++ bounded purpose
++ observable consequence
+=
+productive civic participation
+```
+
+The Grant supports the quality of that mechanism. It does not subsidize passive consumption.
+
+---
+
+## Civic Infrastructure is logistics and economics
+
+The Civic Infrastructure is a logistics and economics substrate.
+
+Its functions include:
+
+- participation,
+- qualification,
+- trust,
+- authentication,
+- communication,
+- evidence,
+- provenance,
+- routing,
+- service delivery,
+- coordination,
+- resource allocation,
+- resource accounting,
+- relationship boundaries,
+- and human operability.
+
+It does not supply ideology, political direction, a cause, a campaign, or an activist objective.
+
+A Civic project or adaptation built on the infrastructure may have a strongly activist purpose. That purpose belongs to the project or its participants, not to the Civic Infrastructure itself.
+
+**Activism is not an infrastructure function.**
+
+The infrastructure remains useful to activist projects only as a side effect of being useful for civic activity, evidence, coordination, trust, logistics, and resource accounting.
+
+---
+
+## Civic activity and activism are distinct
+
+The Civic Infrastructure distinguishes **civic activity** from **activism or advocacy** by function, not by the number of people involved and not by whether the underlying issue is controversial.
+
+### Civic activity
+
+Civic activity makes an existing civic relationship operational.
+
+Examples include:
+
+- determining an existing right or responsibility,
+- exercising an existing right,
+- fulfilling an existing duty,
+- establishing current relationship or affected status,
+- requesting records already required by law or agreement,
+- verifying whether an existing procedure was followed,
+- documenting what actually occurred,
+- comparing declared obligations with observed performance,
+- and preserving evidence of that relationship.
+
+An individual current resident attempting to crystallize that person's own rights and responsibilities within an HOA is engaged in civic activity.
+
+If many Same-and-Equal participants independently perform the same civic activity, the category does not change. Collective participation alone does not transform civic activity into activism.
+
+### Activism or advocacy
+
+Activism or advocacy seeks to change a governing relationship, policy, allocation, priority, rule, law, taxation level, institutional behavior, or public outcome.
+
+The justification for that effort may be strong or weak. That does not alter the classification.
+
+For example, examining how tax revenue is collected, allocated, spent, and exhausted is civic and economic analysis. Organizing for a lower tax rate, a different allocation, or a different policy outcome is advocacy or activism.
+
+The Civic Infrastructure may provide tools that are useful to both. Their inclusion in the infrastructure is justified by demonstrated civic utility, not by their usefulness for activism.
+
+---
+
+## Technology admission rule
+
+Technology is admitted into the Civic Infrastructure by demonstrated civic utility, not by ideology, novelty, popularity, fashion, or association with a movement.
+
+The burden is on the technology to justify its presence.
+
+The Civic Infrastructure does not search for problems in order to justify a technology.
+
+The admission sequence is:
+
+```text
+EVIDENCED CIVIC NEED
+        ↓
+FUNCTIONAL REQUIREMENT
+        ↓
+TECHNOLOGY EVALUATION
+        ↓
+DEMONSTRATED PRODUCTIVE UTILITY
+        ↓
+ADMISSION
+```
+
+This rule applies equally to AI systems, PKI, distributed storage, blockchains, cryptocurrencies, token systems, social platforms, postal systems, cryptographic ledgers, or any other technology.
+
+Blockchain, cryptocurrency, or token mechanisms are not part of the Civic Infrastructure merely because they are decentralized, novel, politically associated, commercially prominent, or potentially useful to activists.
+
+They are admitted only when a concrete Civic Infrastructure function is evidenced and the technology productively performs that function.
+
+A technology admitted for civic purposes may also prove useful for advocacy or activist projects. That secondary usefulness does not redefine the purpose of the infrastructure.
+
+---
+
+## Operational surfaces: systems as they operate
+
+The Civic Infrastructure exposes operational surfaces **as they are**, not merely as they are conceived, described, marketed, intended, or promised.
+
+It keeps separate:
+
+- declared function,
+- written rule,
+- intended purpose,
+- technical capability,
+- actual operation,
+- observed result,
+- and misuse or failure.
+
+A harmful application of a useful capability does not make the underlying capability inherently harmful.
+
+Likewise, a gap between a written right and its practical enforcement does not erase the written right.
+
+The infrastructure exposes the gap.
+
+### Written law and enforcement
+
+For a legal or institutional relationship, the relevant surface is:
+
+```text
+WRITTEN RIGHT OR DUTY
+        ↓
+DEFINED PROCEDURE
+        ↓
+ACTUAL REQUEST OR ACTION
+        ↓
+ACTUAL INSTITUTIONAL RESPONSE
+        ↓
+AVAILABLE ENFORCEMENT
+        ↓
+OBSERVED RESULT
+```
+
+An enforcement gap does not negate a written right. It reveals the conditions under which that right does or does not become operational.
+
+The Civic Infrastructure does not begin by declaring that the law is defective, that the institution is corrupt, or that a policy must change.
+
+It exposes:
+
+- what the rule says,
+- what mechanism is supposed to implement it,
+- what actually happened,
+- where the two diverged,
+- and what evidence establishes that divergence.
+
+This is observability, not activism.
+
+### Technical and platform behavior
+
+The same principle applies to technology.
+
+Capabilities such as ranking, identity, recommendation, moderation, telemetry, account control, cryptographic transfer, or large-scale communications are functional technological capacities.
+
+Tracking, deceptive manipulation, de-platforming abuse, shadow banning, fabricated information, fraud, or cryptocurrency scams are applications or abuses of capabilities.
+
+The Civic Infrastructure distinguishes the capability from the use made of it.
+
+---
+
+## Finite resource pools
+
+The Civic Infrastructure treats money, labor, compute, storage, equipment, time, attention, bandwidth, and other productive inputs as finite resource pools.
+
+It exposes how resources:
+
+- enter a system,
+- are collected,
+- are allocated,
+- are obligated,
+- are consumed,
+- are exhausted for a particular use,
+- produce outputs,
+- and change over time.
+
+These states are not interchangeable.
+
+```text
+AVAILABLE
+    ↓
+COLLECTED
+    ↓
+ALLOCATED
+    ↓
+OBLIGATED
+    ↓
+SPENT
+    ↓
+EXHAUSTED FOR THAT USE
+```
+
+Collection is not consumption.
+
+Allocation is not consumption.
+
+Holding is not consumption.
+
+Lending is not consumption.
+
+**Spending is consumption of the finite pool for that use.**
+
+A large allocation or expenditure is not treated as a defect merely because it is large.
+
+The infrastructure instead exposes:
+
+- amount,
+- source,
+- allocation,
+- expenditure,
+- output,
+- trend,
+- efficiency,
+- return value,
+- changing demand,
+- and resource exhaustion.
+
+Efficiency is not synonymous with spending less.
+
+A system may spend more while becoming more efficient if useful output increases faster than resource consumption. A system may also spend less while losing capacity or value.
+
+The Civic Infrastructure therefore presents the relationship between resources consumed, useful output, service requirement, and change over time without prescribing the desired allocation.
 
 ---
 
@@ -107,101 +343,86 @@ The intended result is a system that people with useful spare capacity want to j
 
 The Self-Addressed Stamped Envelope, or **SASE**, is the first human participation gate.
 
-Participation does not begin with a browser account, email address, certificate, password, database row, or administrator invitation.
+Participation does not begin with a browser account, email address, certificate, password, database row, public record, imported roster, or administrator invitation.
 
 It begins with a deliberate human act.
 
-The sequence is:
+The SASE establishes observable evidence of:
 
-1. voluntary human act,
-2. SASE,
-3. personal effort,
-4. small personal monetary cost,
-5. physical assembly,
-6. physical mailing,
-7. unavoidable delay,
-8. successful return path,
-9. participant eligibility process,
-10. project qualification,
-11. current relationship,
-12. affected status,
-13. Same and Equal relationship where applicable,
-14. technical privileges.
+- voluntary participation,
+- expenditure of personal effort,
+- a small personal monetary commitment,
+- successful completion of a physical multi-step process,
+- acceptance of unavoidable delay before receiving privileges,
+- and, where relevant, successful use of the qualifying physical delivery path.
 
-Technical privileges can then include an account, email, portal access, project services, and later Civic standing or authority only where those are separately established.
+The SASE does not claim to measure character or personality.
 
-### What SASE evidences
-
-**Voluntary participation.**  
-The individual chose to perform the enrollment act. The person was not automatically enrolled from a public record, association roster, mailing list, scraped database, or administrative import.
-
-**Expenditure of effort.**  
-The participant must obtain the materials, prepare the envelope correctly, address it, apply postage, and mail it.
-
-**Expenditure of money.**  
-The cost is intentionally small, but it is not zero. The participant personally commits a modest resource to the act of joining.
-
-**Acceptance of delay.**  
-Participation privileges are not granted instantly. The prospective participant must tolerate the normal delay of a physical postal exchange before the process completes.
-
-This does not claim to measure a personality trait. It establishes something observable and narrower:
-
-> The participant was willing and able to complete a delayed, multi-step enrollment process before receiving participation privileges.
-
-**Physical-channel evidence.**  
-Where the project uses an address qualification, the postal exchange can provide evidence that the participation process successfully traversed the relevant physical delivery path.
+It establishes the narrower fact that the participant was willing and able to complete a delayed, multi-step enrollment process before receiving participation privileges.
 
 ### What SASE does not prove
 
-SASE must not be overstated.
+SASE does not by itself prove:
 
-By itself it does not prove permanent legal identity, ownership, permanent residency, Civic standing, Affected Status, Same and Equal status, governance authority, truthfulness, or expertise.
+- permanent legal identity,
+- ownership,
+- permanent residency,
+- project qualification,
+- CURRENT RESIDENT status,
+- Affected Status,
+- Same and Equal status,
+- Civic standing,
+- governance authority,
+- truthfulness,
+- or expertise.
 
-It is the top-level participation act, not a universal identity proof.
+SASE is the top-level participation act, not a universal identity proof.
 
-### Why the friction is intentional
+### Intentional friction
 
-Consumer systems normally remove every possible delay and cost.
+The participation process deliberately preserves a small amount of friction.
 
-The Civic Infrastructure deliberately preserves a small amount of friction because participation is meant to be an intentional act rather than an impulse click.
+Consumer systems normally optimize for instant access, minimal effort, and immediate gratification.
 
-Consumer convenience favors an instant account, minimal effort, and immediate gratification.
+The Civic Infrastructure instead requires deliberate enrollment, observable effort, a small personal commitment, and delayed privilege.
 
-Civic participation here favors deliberate enrollment, observable effort, a small personal commitment, delayed privilege, and a bounded relationship.
-
-This friction is part of the design.
+That friction is functional. It establishes intentional participation before technical privileges are granted.
 
 ---
 
-## Project qualification is separate from participation
+## Participation, qualification, and trust are separate
 
-SASE answers:
+The Civic Infrastructure preserves three distinct questions.
 
-> Did this human deliberately elect to participate?
+### Participation Gate
 
-It does not answer:
+**Did this human deliberately elect to participate?**
 
-> In which bounded Civic project does this person qualify?
+SASE answers this question.
 
-Those are separate questions.
+### Project Qualification
 
-The qualification rules belong to the particular project.
+**Why does this participant qualify for this bounded Civic project?**
 
-Examples may include a Kane County residential relationship, a Maker Community relationship, an Illinois Agriculture relationship, a Construction-sector relationship, a Non-Engineer qualification class, or another explicitly bounded community.
+Project-specific qualification rules answer this question.
 
-The design must therefore preserve three different concepts:
+### Technical Trust Domain
 
-**Participation Gate**  
-How did the human deliberately elect to participate?  
-SASE answers this.
+**Which infrastructure is authorized to operate that project?**
 
-**Project Qualification**  
-Why is this person eligible for this particular bounded project?  
-Project-specific rules answer this.
+A project intermediate CA under the Civic Infrastructure CA answers this question.
 
-**Technical Trust Domain**  
-Which infrastructure is authorized to operate that project?  
-A project intermediate CA under the Civic Infrastructure CA answers this.
+No one layer is allowed to impersonate another.
+
+A certificate does not prove participation.
+
+Participation does not prove project qualification.
+
+Project qualification does not establish Affected Status.
+
+Affected Status does not establish Same and Equal.
+
+Same and Equal does not establish governance authority.
 
 ---
 
@@ -209,63 +430,56 @@ A project intermediate CA under the Civic Infrastructure CA answers this.
 
 The root trust authority is the **Civic Infrastructure CA**.
 
-The root is not a County CA.
+A deliberately bounded Civic project operates beneath its own project intermediate CA.
 
-A county, maker community, industry sector, statewide project, qualification sector, or other bounded Civic project receives its own intermediate CA beneath the Civic Infrastructure CA.
+The hierarchy is:
 
-The general hierarchy is:
+```text
+Civic Infrastructure CA
+    |
+    +-- Project Intermediate CA
+    |       |
+    |       +-- service certificate
+    |       +-- service certificate
+    |
+    +-- Project Intermediate CA
+            |
+            +-- service certificate
+```
 
-- Civic Infrastructure CA — root trust authority
-  - Project Intermediate CA
-    - service certificate
-    - service certificate
-    - service certificate
-  - another Project Intermediate CA
-    - service certificate
+Kane County is a bounded Civic project under this hierarchy:
 
-Kane is one project:
+```text
+Civic Infrastructure CA
+    |
+    +-- Civic Infrastructure Kane County IL CA
+            |
+            +-- Kane project service certificates
+```
 
-- Civic Infrastructure CA
-  - Civic Infrastructure Kane County IL CA
-    - portal.diagnostics.kane-il.us
-    - witness.diagnostics.kane-il.us
-    - other Kane project services
+An intermediate CA represents a deliberately bounded Civic project, not merely another collection of user accounts.
 
-Future bounded projects could take very different forms:
+Browser trust in a project CA establishes technical trust in project-issued services. It does not confer participation, project qualification, current status, affected status, Same and Equal status, Civic standing, or authority.
 
-- Kane County project,
-- Maker Community project,
-- Illinois Agriculture project,
-- Construction-sector project,
-- Non-Engineers project.
-
-These examples illustrate possible project boundaries; they are not assertions that those projects already exist.
-
-The important architectural rule is:
-
-> An intermediate CA represents a deliberately bounded Civic project, not merely another collection of user accounts.
-
-Browser trust in a project CA establishes technical trust in the infrastructure serving that project. It does not, by itself, confer participation, current status, affected status, standing, or authority.
+The Civic Infrastructure model is not restricted to geographic project boundaries. A bounded project is defined by explicit qualification rules and its own trust domain.
 
 ---
 
-## Kane as the first bounded Civic project
+## Kane County project
 
-Kane County is the first concrete implementation of the pattern.
+Kane County is the first concrete Civic Infrastructure project.
 
-Its deliberate limitation is established by several mutually reinforcing boundaries rather than one all-purpose identity mechanism.
-
-The conceptual sequence is:
+Its boundaries are established by independent evidence and trust layers:
 
 1. **SASE** — deliberate voluntary participation.
 2. **Kane Project Qualification** — qualifying relationship to the Kane project.
-3. **CURRENT RESIDENT** — present-tense relationship rather than historical membership.
+3. **CURRENT RESIDENT** — present-tense relationship.
 4. **Affected Status** — whether the participant is actually affected by the institution or issue.
-5. **Same and Equal** — whether another participant is a true peer for the HOA discussion.
+5. **Same and Equal** — whether another participant occupies the same relevant peer relationship.
 6. **Kane Project CA** — technical trust for Kane project services.
-7. **DNS / Mail Boundary** — bounded communications by default, with explicit exceptions where required.
+7. **DNS / Mail Boundary** — bounded communications by default, with explicit exceptions that do not confer participation.
 
-No single layer is allowed to impersonate another.
+No single layer substitutes for another.
 
 ---
 
@@ -273,33 +487,39 @@ No single layer is allowed to impersonate another.
 
 **CURRENT RESIDENT** is deliberately present-tense.
 
-The infrastructure is concerned with the participant's current relationship to the qualifying residence or community, not with creating a permanent identity that follows a person forever.
+The Civic Infrastructure is concerned with the participant's current relationship to the qualifying residence or community.
+
+It does not create a permanent identity that follows a person indefinitely.
 
 A former resident and a current resident are not interchangeable merely because both once had a relationship to the same property.
-
-CURRENT RESIDENT therefore contributes to the determination of present participation without claiming permanent identity.
 
 ---
 
 ## Affected Status
 
-**Affected Status** asks whether a participant is presently affected by the institution, rule, event, or issue under discussion.
+**Affected Status** asks whether a participant is presently affected by the institution, rule, event, or issue under examination.
 
-It is separate from SASE, browser trust, email access, project qualification, general participation, Same and Equal, and Civic standing.
+It is separate from:
+
+- SASE,
+- browser trust,
+- email access,
+- project qualification,
+- general participation,
+- Same and Equal,
+- and Civic standing.
 
 A person may communicate with the infrastructure without having Affected Status for a particular issue.
 
-Likewise, admitting an outside correspondent through an explicit communications exception does not manufacture Affected Status.
+An external communications exception does not manufacture Affected Status.
 
 ---
 
 ## Same and Equal
 
-**Same and Equal** is a narrow relationship test for discussion of an HOA issue.
+**Same and Equal** is a narrow relationship test.
 
-It does not mean that all participants everywhere are equivalent.
-
-Two people are Same and Equal only when both occupy the same current homeowner relationship inside the **same Association** for the matter being discussed.
+For an HOA matter, two people are Same and Equal only when both occupy the same current homeowner relationship inside the **same Association** for the matter under examination.
 
 Examples:
 
@@ -308,111 +528,59 @@ Examples:
 - current homeowner + former homeowner, same Association → NOT SAME AND EQUAL
 - homeowner + Board member, same Association → NOT SAME AND EQUAL
 
-The Board-member case matters because the Board member occupies an institutional or governance role relative to the homeowner. Shared ownership does not erase that asymmetry.
+The Board-member case is distinct because the Board member occupies an institutional or governance role relative to the homeowner. Shared ownership does not erase that asymmetry.
 
-The Kane project may therefore contain many Associations without turning them into one undifferentiated county-wide homeowner forum.
-
-Association A can contain Same-and-Equal discussion among its current homeowners. Association B can independently contain Same-and-Equal discussion among its current homeowners. Cross-Association discussion may still be useful, but it is not Same and Equal.
+The number of Same-and-Equal participants does not change the nature of their civic activity.
 
 ---
 
-## DNS and mail whitelist with explicit exceptions
+## DNS and mail boundary
 
 The Kane communications environment is deliberately bounded by default.
 
-The current mail design recognizes the Civic namespace under *.diagnostics.kane-il.us and rejects unapproved external origins by default.
+The Civic communications namespace is under:
 
-Explicit external exceptions may be created for legitimate outside correspondents such as grant trustees or other deliberately authorized parties.
+```text
+*.diagnostics.kane-il.us
+```
 
-Those are communications exceptions only.
+Unapproved external origins are rejected by default.
 
-An external communications exception is not SASE participation, project qualification, CURRENT RESIDENT status, Affected Status, Same and Equal status, or Civic standing.
+Explicit external exceptions can permit legitimate outside correspondence without conferring Kane participation.
 
-An outside party may therefore communicate with the project without becoming a Kane participant.
+An external communications exception is not:
 
----
-
-## Boundary principle
-
-The Kane project is not simply people who happen to use a Kane County website.
-
-It is a deliberately bounded Civic environment composed from independent evidence and trust layers:
-
-- SASE voluntary participation,
+- SASE participation,
 - Kane project qualification,
-- current-resident relationship,
-- issue-specific affected status,
-- Same-and-Equal peer relationship where applicable,
-- project-specific technical trust,
-- bounded communications by default,
-- and explicit exceptions that do not confer participation.
+- CURRENT RESIDENT status,
+- Affected Status,
+- Same and Equal status,
+- or Civic standing.
 
-This structure must remain visible in grant-map because the operator needs to understand both the physical infrastructure and the human rules that the infrastructure exists to preserve.
-
----
-
-## Expansion model
-
-The architecture is intentionally broader than a county while each individual project remains deliberately bounded.
-
-Possible replication axes include:
-
-**Geographic**
-- another county,
-- a multi-county region,
-- Illinois,
-- another bounded jurisdiction.
-
-**Community**
-- maker community,
-- local technical cooperative,
-- another defined community of practice.
-
-**Industry**
-- agriculture,
-- construction,
-- another industry sector.
-
-**Qualification or relationship**
-- homeowners,
-- non-engineers,
-- another explicitly defined participant class.
-
-The reusable unit is not the Kane County website.
-
-The reusable unit is:
-
-- SASE participation gate,
-- project-specific qualification,
-- project intermediate CA,
-- bounded services,
-- explicit relationship semantics,
-- and human-operable infrastructure.
-
-That is the unit the Grant should make attractive and reproducible.
+Communication permission and participation are separate.
 
 ---
 
 ## Human infrastructure mapping mission
 
-The operational map must allow a competent human operator who did not build the system to answer:
+The operational map allows a competent human operator who did not build the system to answer:
 
 1. What logical Civic nodes exist?
 2. Which public service names belong to each node?
 3. Which proxy, relay, or ingress binds each public name to a backend?
-4. Which physical host, VM, or LXD instance currently implements that backend?
-5. How does a human reach and manage it from the home LAN, the public Internet, and the relevant WireGuard or private fabric?
+4. Which physical host, VM, or LXD instance implements that backend?
+5. How does a human reach and manage it from the home LAN, public Internet, and relevant WireGuard or private fabric?
 6. Which management UI, URL, port, and authentication boundary is required?
-7. How are containers and VMs themselves managed?
+7. How are containers and VMs managed?
 8. What dependencies must exist for the service to remain reachable?
 9. What can move without changing the logical Civic node or public service identity?
-10. What is still unknown or unverified?
+10. What remains unknown or unverified?
 
 ---
 
 ## Governing infrastructure distinction
 
-The map must keep these objects separate:
+The map keeps these objects separate:
 
 **CIVIC NODE** — logical public function.
 
@@ -420,7 +588,7 @@ The map must keep these objects separate:
 
 **ROUTING / PROXY** — how that service identity reaches its backend.
 
-**BACKEND SERVICE** — Hubzilla, Usermin, Webmin, Dovecot, Postfix, LXD UI, or another service.
+**BACKEND SERVICE** — the software service that performs the function.
 
 **COMPUTE LOCATION** — physical host, VM, or LXD instance.
 
@@ -428,28 +596,30 @@ The map must keep these objects separate:
 
 **HUMAN MANAGEMENT** — exact URL, port, UI, and access context.
 
-A DNS name is not a host.  
-An IP address is not a management interface.  
+A DNS name is not a host.
+
+An IP address is not a management interface.
+
 A backend location is not a Civic node identity.
 
 ---
 
 ## Required access contexts
 
-Every manageable object must be evaluated in all applicable contexts:
+Every manageable object is evaluated in all applicable contexts:
 
 - HOME-LAB HUMAN
 - REMOTE/PUBLIC HUMAN
 - CIVIC INTER-HOST
 - PUBLIC PARTICIPANT
 
-If an access context does not apply, say so explicitly.
+If an access context does not apply, it is recorded as not applicable.
 
 ---
 
 ## Required host fields
 
-Every host, VM, or LXD instance inventory must contain:
+Every host, VM, or LXD instance inventory contains:
 
 - NAME
 - ROLE
@@ -467,7 +637,7 @@ Every host, VM, or LXD instance inventory must contain:
 - VERIFIED
 - UNKNOWN
 
-Every public service inventory must contain:
+Every public service inventory contains:
 
 - CIVIC NODE
 - SERVICE NAME
@@ -489,9 +659,9 @@ Every public service inventory must contain:
 
 ## Evidence rule
 
-The mapping assistant must interrogate the live infrastructure.
+The mapping process interrogates the live infrastructure.
 
-It must not infer missing addresses, ports, routing, proxy targets, management surfaces, trust relationships, or backend locations.
+It does not infer missing addresses, ports, routing, proxy targets, management surfaces, trust relationships, backend locations, or operational status.
 
 A fact is marked **verified** only when it is obtained from the live host or configuration or directly demonstrated by a successful access path.
 
@@ -503,16 +673,18 @@ Unknowns remain visible as unknowns.
 
 A system is not considered mapped merely because another machine, script, or LLM can reach it.
 
-For human-managed infrastructure, the map is incomplete until the operator can answer:
+For human-managed infrastructure, the map records:
 
-- Where do I point my browser or terminal?
-- Which address?
-- Which port?
-- Which management application?
-- From which network context?
-- What does that management surface control?
-- Which browser profile is authorized?
-- Which CA roots or client certificates must that browser hold?
+- where the operator points a browser or terminal,
+- which address,
+- which port,
+- which management application,
+- from which network context,
+- what that management surface controls,
+- which browser profile or terminal client is authorized,
+- and which CA roots or client certificates are required.
+
+If operational access depends on undocumented memory, the system is not fully mapped.
 
 ---
 
@@ -520,9 +692,7 @@ For human-managed infrastructure, the map is incomplete until the operator can a
 
 Browser state is part of the access path.
 
-For every browser-managed service, grant-map must record the actual browser or browser profile used by the human operator and the trust material required by that browser.
-
-At minimum record:
+For every browser-managed service, `grant-map` records:
 
 - DEVICE / WORKSTATION
 - OPERATING SYSTEM
@@ -535,10 +705,10 @@ At minimum record:
 - CERTIFICATE SUBJECT OR LABEL
 - CERTIFICATE FINGERPRINT
 - EXPIRY
-- PRIVATE KEY LOCATION — never publish; record only where and how it is protected
+- PRIVATE KEY LOCATION — never publish the key; record only where and how it is protected
 - VERIFIED
 
-Two certificate roles must never be conflated:
+Two certificate roles are distinct:
 
 **Civic Infrastructure / Project CA trust** means the browser trusts project-issued server certificates.
 
@@ -548,77 +718,70 @@ Installing project CA trust in one browser does not enroll another browser.
 
 Installing an LXD client certificate in one browser profile does not authorize another browser profile.
 
-A service is not considered human-accessible until the required trust and client material is documented for the browser actually used.
+A service is human-accessible only when the required trust and client material are documented for the browser actually used.
 
-See grant-map/browser-access.md.
+See `grant-map/browser-access.md`.
 
 ---
 
-## Initial mapping target: annales
+## Verified annales facts
 
-The first fully inventoried system is annales.
+`annales` is a verified Civic Infrastructure compute/inference host.
 
-Verified starting facts:
-
-- HOST: annales
+- HOST: `annales`
 - ROLE: Ubuntu LXD host; compute/inference plane
-- HOME-LAB LAN: 10.0.0.36
-- WITNESS WIREGUARD: 10.110.0.9
-- WEBMIN — HOME LAB: https://10.0.0.36:10000/
-- WEBMIN — REMOTE: https://198.58.111.109:10000/ then Webmin Servers Index on wg-pk, then annales at 10.110.0.9:10000
-- LXD HUMAN WEB MANAGEMENT: https://10.0.0.36:8443/
+- HOME-LAB LAN: `10.0.0.36`
+- WITNESS WIREGUARD: `10.110.0.9`
+- WEBMIN — HOME LAB: `https://10.0.0.36:10000/`
+- WEBMIN — REMOTE: `https://198.58.111.109:10000/` through the Webmin Servers Index on `wg-pk`, then `annales` at `10.110.0.9:10000`
+- LXD HUMAN WEB MANAGEMENT: `https://10.0.0.36:8443/`
 - LXD web management is verified operational from the home lab.
 
-Important network warning:
+### Network-context warning
 
-The home LAN uses 10.0.0.x, while the separate diagnostics WireGuard fabric also uses 10.0.0.0/24. Every reference to a 10.0.0.x address must therefore state its network context.
+The home LAN uses `10.0.0.x`.
 
-The next mapping work is to complete the live LXD inventory and map every instance, network, storage pool, trust identity, and management path.
+A separate diagnostics WireGuard fabric also uses `10.0.0.0/24`.
 
----
-
-## Repository working copy
-
-A dedicated LXD instance on annales should hold the local working copy of git64bit/kane-rag-email used by the mapping assistant.
-
-That instance is an **operator/mapping workbench**, not a production Civic service.
-
-It should be isolated from production workloads and given only the reach and credentials required for infrastructure discovery and repository updates.
-
-Its final name, addresses, management path, and permissions must themselves be recorded after creation.
+Every reference to a `10.0.0.x` address therefore states its network context.
 
 ---
 
 ## Credential boundary
 
-Human-operability documentation must identify the account or credential class required for a service, but secrets do not belong in this repository.
+Human-operability documentation identifies the account or credential class required for a service, but secrets do not belong in this repository.
 
-Do not commit passwords, CA private keys, client private keys, trust tokens, recovery secrets, or private credential logs.
+The repository does not contain:
 
-The operator maintains those separately.
+- passwords,
+- CA private keys,
+- client private keys,
+- trust tokens,
+- recovery secrets,
+- or private credential logs.
 
-The map records enough information to know which credential is needed and where it is privately maintained, without publishing the secret itself.
+The map records enough information to identify which credential class is required and where that credential is privately maintained without publishing the secret.
 
 ---
 
-## Definition of done
+## Definition of a complete map
 
-The map is complete only when a competent human operator can answer, for every Civic service:
+For every Civic service, the map identifies:
 
-- What is it?
-- Which Civic project and Civic node does it belong to?
-- What public name does a human use?
-- Where does traffic enter?
-- Which proxy or relay handles it?
-- Where does the backend run today?
-- How do I reach it from home?
-- How do I reach it remotely?
-- Which exact URL and port do I use?
-- Which browser profile or terminal client?
-- Which project CA or client certificate is required?
-- How do I manage the host?
-- How do I manage its containers or VMs?
-- Which credential class is required?
-- What breaks if this component moves or fails?
+- what the service is,
+- which Civic project and Civic node it belongs to,
+- what public name a human uses,
+- where traffic enters,
+- which proxy or relay handles it,
+- where the backend runs,
+- how it is reached from home,
+- how it is reached remotely,
+- the exact URL and port,
+- the required browser profile or terminal client,
+- the required project CA or client certificate,
+- how the host is managed,
+- how its containers or VMs are managed,
+- which credential class is required,
+- and what dependencies fail if the component moves or becomes unavailable.
 
-If the answer depends on undocumented memory, the map is not complete.
+A map that depends on undocumented operator memory is incomplete.

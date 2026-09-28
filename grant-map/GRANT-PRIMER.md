@@ -131,7 +131,45 @@ It is intended to improve the mechanism that allows already-existing productive 
 
 ---
 
-# 4. Why the infrastructure is deliberately bounded
+# 4. Participants and owner-operators
+
+The Civic Infrastructure does not treat people as passive users of a centrally supplied service.
+
+It has **participants**.
+
+A participant deliberately enters a bounded Civic project and may contribute knowledge, time, attention, technical skill, equipment, compute, storage, bandwidth, administration, physical space, or other productive capacity.
+
+A software product may internally use the word `user`. That term does not define the Civic relationship.
+
+An **owner-operator** is a participant who contributes sufficient resources and accepts sufficient operational responsibility to own or control and operate a qualified Civic Infrastructure node or service.
+
+Owner-operation is one expression of surplus capacity.
+
+It does not confer Civic standing, project authority, or governance authority merely because infrastructure is operated.
+
+The Civic Infrastructure does not require every participant to become an owner-operator. It preserves that path for qualified participants who have the resources, competence, and commitment to contribute at that level.
+
+This is an important part of the economic model:
+
+```text
+active participant
+        ↓
+contributed surplus capacity
+        ↓
+qualified owner-operator
+        ↓
+additional operated capacity
+        ↓
+additional resilience and productive reach
+```
+
+The project therefore does not measure growth primarily by account count or by the size of one centralized service.
+
+It measures growth by productive participation, usable surplus capacity, and the creation of additional qualified owner-operated capacity.
+
+---
+
+# 5. Why the infrastructure is deliberately bounded
 
 The Civic Infrastructure is not designed as an unlimited public network.
 
@@ -148,7 +186,7 @@ A bounded project has:
 
 Kane County is the first concrete project.
 
-The reusable idea, however, is not "a Kane County website."
+The reusable idea, however, is not "a Kane County website" and not a larger server containing more accounts.
 
 The reusable unit is:
 
@@ -160,6 +198,7 @@ deliberate participation
 + explicit relationships
 + operational evidence
 + human operability
++ a path to qualified owner-operation
 ```
 
 This boundary is important for both grant credibility and project safety.
@@ -170,7 +209,7 @@ A small bounded project can be successful if it performs its intended civic func
 
 ---
 
-# 5. SASE: participation begins with a deliberate human act
+# 6. SASE: participation begins with a deliberate human act
 
 The first human participation gate is the **Self-Addressed Stamped Envelope (SASE)**.
 
@@ -201,7 +240,7 @@ It proves something narrower and useful:
 
 ---
 
-# 6. Participation is not the same as qualification
+# 7. Participation is not the same as qualification
 
 The Civic Infrastructure keeps several concepts separate.
 
@@ -249,7 +288,7 @@ Affected Status does not automatically create a Same-and-Equal relationship.
 
 ---
 
-# 7. Civic activity is not activism
+# 8. Civic activity is not activism
 
 The Civic Infrastructure distinguishes **civic activity** from **activism or advocacy**.
 
@@ -294,7 +333,7 @@ Those tools are included because of their demonstrated utility for civic activit
 
 ---
 
-# 8. The Civic Infrastructure is logistics and economics
+# 9. The Civic Infrastructure is logistics and economics
 
 The Civic Infrastructure is best understood as **logistics and economics**.
 
@@ -329,7 +368,7 @@ It is asking the funder to evaluate an infrastructure for making civic relations
 
 ---
 
-# 9. Operational surfaces: showing systems as they actually operate
+# 10. Operational surfaces: showing systems as they actually operate
 
 A central Civic Infrastructure principle is:
 
@@ -394,7 +433,7 @@ This prevents the project from becoming either reflexively pro-technology or ref
 
 ---
 
-# 10. Finite resource pools
+# 11. Finite resource pools
 
 The Civic Infrastructure treats money, labor, compute, storage, equipment, time, attention, and bandwidth as finite resource pools.
 
@@ -454,7 +493,7 @@ That is economic observability rather than advocacy.
 
 ---
 
-# 11. Technology is admitted by demonstrated civic utility
+# 12. Technology is admitted by demonstrated civic utility
 
 The Civic Infrastructure does not adopt technology because it is fashionable.
 
@@ -507,9 +546,32 @@ A technology admitted for civic purposes may also be useful to activists.
 
 That is secondary utility, not the infrastructure's purpose.
 
+## Technology admission in practice: Hubzilla
+
+Hubzilla provides the first concrete case study of this admission discipline.
+
+It was selected because a combination of its capabilities maps directly to evidenced Civic Infrastructure requirements:
+
+- bounded participant-facing realms,
+- owner-operated deployment,
+- nomadic identity,
+- cloning and recoverability,
+- extensibility through add-ons and related mechanisms,
+- controlled interoperability including ActivityPub support,
+- rich and durable publication,
+- and relationship-aware permissions.
+
+The important grant point is not that Hubzilla is a preferred social platform.
+
+It is that the project identified the civic requirements first and then admitted a technology that satisfies several of them at once.
+
+Hubzilla also demonstrates the owner-operator model. A qualified participant with sufficient resources and responsibility can operate qualified infrastructure rather than remaining permanently dependent on another operator's service.
+
+The full admission reasoning is documented in `grant-map/HUBZILLA.md`.
+
 ---
 
-# 12. Technical trust
+# 13. Technical trust
 
 The root technical trust authority is the **Civic Infrastructure CA**.
 
@@ -538,7 +600,7 @@ Technical trust is intentionally narrower than civic relationship.
 
 ---
 
-# 13. Why the project is credible
+# 14. Why the project is credible
 
 A grant proposal is stronger when the funder is not being asked to finance an idea that exists only on paper.
 
@@ -564,7 +626,7 @@ The funding case is about increasing the usefulness, accessibility, reproducibil
 
 ---
 
-# 14. What the Grant buys
+# 15. What the Grant buys
 
 A strong grant application does not merely describe what money will be spent on.
 
@@ -593,7 +655,7 @@ That is different from paying indefinitely for ordinary operations.
 
 ---
 
-# 15. What a grant reviewer will usually ask
+# 16. What a grant reviewer will usually ask
 
 Different funders use different forms, but most applications are variations of the same underlying questions.
 
@@ -692,7 +754,7 @@ Evidence can include:
 - repositories,
 - documented workflows,
 - completed prototypes,
-- observed user behavior,
+- observed participant behavior,
 - comparative data,
 - and independently verifiable public facts.
 
@@ -704,7 +766,7 @@ A good measure is observable and connected to the claimed outcome.
 
 Weak:
 
-> Users will like the system.
+> Participants will find the system usable.
 
 Stronger:
 
@@ -745,7 +807,7 @@ It demonstrates that the applicant understands the operating surface rather than
 
 ---
 
-# 16. Outputs, outcomes, and impact
+# 17. Outputs, outcomes, and impact
 
 These three terms are frequently confused.
 
@@ -792,7 +854,7 @@ The Civic Infrastructure should prefer measurable claims over grand claims.
 
 ---
 
-# 17. What the application should not claim
+# 18. What the application should not claim
 
 The project does not need exaggerated language to be compelling.
 
@@ -818,9 +880,9 @@ That is sufficient.
 
 ---
 
-# 18. Why smallness is an advantage
+# 19. Why smallness is an advantage
 
-The Civic Infrastructure has been repeatedly reduced rather than expanded.
+The Civic Infrastructure has been repeatedly reduced rather than expanded, while preserving the path from participant to owner-operator where productive capacity supports it.
 
 This is an advantage when the result is a smaller system that preserves the necessary function.
 
@@ -841,7 +903,7 @@ It is to make the necessary system close to trivial to understand.
 
 ---
 
-# 19. Grant leverage
+# 20. Grant leverage
 
 The strongest funding argument is not that the project needs money.
 
@@ -881,7 +943,7 @@ It is a request to increase the productive reach of an existing system.
 
 ---
 
-# 20. How to read a grant opportunity
+# 21. How to read a grant opportunity
 
 Before writing an application, extract the funder's requirements into a simple table.
 
@@ -908,7 +970,7 @@ A poor fit remains a poor fit even if the application can be made linguistically
 
 ---
 
-# 21. Basic grant vocabulary
+# 22. Basic grant vocabulary
 
 **Applicant**  
 The legal person or organization submitting the application.
@@ -969,7 +1031,7 @@ Statements from relevant organizations or individuals demonstrating interest, cr
 
 ---
 
-# 22. A simple Civic Infrastructure logic model
+# 23. A simple Civic Infrastructure logic model
 
 A grant application will often require some version of a logic model.
 
@@ -1019,7 +1081,7 @@ The exact activities, outputs, measures, and targets must come from the specific
 
 ---
 
-# 23. The evidence discipline
+# 24. The evidence discipline
 
 Grant language should never outrun evidence.
 
@@ -1042,7 +1104,7 @@ A reviewer should be able to tell what already exists and what funding is expect
 
 ---
 
-# 24. The central grant case
+# 25. The central grant case
 
 The Civic Infrastructure does not begin with the premise that civic capacity must first be created.
 
@@ -1064,6 +1126,6 @@ The Grant increases the usefulness of that mechanism.
 
 The central funding proposition is therefore:
 
-> **There is already useful human and technical capacity seeking consequential work. There is already a functioning Civic Infrastructure model capable of directing that capacity. Grant funding creates leverage by making the model easier to understand, use, verify, operate, and reproduce.**
+> **There is already useful human and technical capacity seeking consequential work. There is already a functioning Civic Infrastructure model capable of directing that capacity. Grant funding creates leverage by making the model easier to understand, use, verify, operate, reproduce, and—where participants have sufficient resources and responsibility—extend through qualified owner-operated capacity.**
 
 That is the foundation from which a specific grant application can be written.

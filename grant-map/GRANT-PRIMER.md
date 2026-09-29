@@ -331,6 +331,38 @@ The Civic Infrastructure can provide tools useful to both activities.
 
 Those tools are included because of their demonstrated utility for civic activity, not because the infrastructure promotes an activist objective.
 
+## Witnessing as subject-matter research
+
+The Witness node is a subject-matter research facility for Civic Infrastructure.
+
+Its purpose is to help participants examine real civic experiences, preserve what can be established, identify gaps in evidence or procedure, and determine what infrastructure could make those experiences more observable and attestable.
+
+The Witness node does not exist to promote, organize, or demand changes to public policy or law.
+
+A participant may discover that an existing law, policy, institutional procedure, or enforcement mechanism leaves a practical gap. The infrastructure may document that gap, preserve the evidence, compare the declared rule with the observed result, and support research into how the relationship actually operates.
+
+The infrastructure does not convert that observation into an advocacy position.
+
+The governing sequence is:
+
+```text
+PERSONAL OR CIVIC EXPERIENCE
+        ↓
+OBSERVATION
+        ↓
+EVIDENCE / PROVENANCE
+        ↓
+ATTESTATION DEVELOPMENT
+        ↓
+SUBJECT-MATTER RESEARCH
+        ↓
+OPERATIONAL GAP MADE VISIBLE
+```
+
+Whether anyone later seeks a change in policy, law, institutional priority, or public outcome is a separate activity.
+
+This distinction keeps the Witness node aligned with the infrastructure function: bridging gaps in knowledge, evidence, observability, and practical civic operation rather than directing participants toward a prescribed political or policy result.
+
 ---
 
 # 9. The Civic Infrastructure is logistics and economics

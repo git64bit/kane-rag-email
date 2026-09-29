@@ -25,12 +25,12 @@ real UNIX principal
         ↓
 bounded home directory
         ↓
-Usermin / SSH / Terminal
+Usermin / Terminal
         ↓
 Civic applications and Civic state
 ~~~
 
-The UNIX account is the durable operational principal. Usermin is a browser-accessible interface to that account. SSH is another possible interface. A future terminal client, local console, or replacement web terminal may provide another interface without changing the participant account itself.
+The UNIX account is the durable operational principal. Usermin is a browser-accessible interface to that account. Public SSH ingress is not exposed for ordinary participant access. Outbound SSH is permitted from the participant UNIX environment. A future terminal client, local console, or replacement web terminal may provide another interface without changing the participant account itself.
 
 ## Production account example
 
@@ -89,10 +89,9 @@ The participant UNIX account may contain persistent Civic Infrastructure state s
 
 ~~~text
 ~/.ssh/
-    SSH keys
-    authorized_keys
+    outbound SSH keys
     known_hosts
-    SSH configuration
+    SSH client configuration
 
 ~/.gnupg/
     OpenPGP keys
@@ -354,10 +353,11 @@ A terminal application can operate through:
 
 ~~~text
 Usermin Terminal
-SSH
 local console
 future standards-based terminal interface
 ~~~
+
+Outbound SSH remains available as a client capability from the participant UNIX environment; it is not an inbound participant login surface.
 
 without being rewritten as a platform-specific mobile, Windows, Apple, Chrome, or proprietary web application.
 

@@ -205,14 +205,23 @@ Outbound witness-side mail currently follows:
 ```text
 witness-hubzilla
         |
+        | certificate-verified TLS
         v
 wg-pk 10.110.0.1
         |
+        | DNSSEC-validated DANE TLS
         v
 mx1.diagnostics.kane-il.us
         |
+        | OpenDKIM signs diagnostics.kane-il.us
         v
 Internet
+```
+
+The `wg-pk -> mx1` DANE hop is verified over both IPv4 and IPv6. The complete 2026-09-29 mail-path validation, sender-policy test, DNSSEC correction, and known non-blocking warnings are recorded in:
+
+```text
+grant-map/MAIL-VALIDATION-2026-09-29.md
 ```
 
 ### Inbound authorization boundary

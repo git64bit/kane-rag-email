@@ -220,7 +220,124 @@ These functions are deliberately separate.
 
 ---
 
-# 5. Civic requirement: bounded project surface
+# 5. Civic requirement: federated identifiers are retired, not recycled
+
+A Hubzilla channel address is not merely a local username.
+
+Once a channel has existed as a federated identity, other systems may retain references to:
+
+- its channel address,
+- cryptographic identity,
+- public keys,
+- locations,
+- relationships,
+- content,
+- permissions,
+- and deletion state.
+
+Deletion therefore does not restore the channel address to an unused state.
+
+The governing lifecycle is:
+
+```text
+CREATED
+    ↓
+FEDERATED IDENTITY EXISTS
+    ↓
+DELETED
+    ↓
+IDENTIFIER RETIRED
+```
+
+It is not:
+
+```text
+CREATED
+    ↓
+DELETED
+    ↓
+AVAILABLE FOR REUSE
+```
+
+A retired federated identifier must not be reassigned to a different identity.
+
+The reason is operational rather than cosmetic.
+
+Remote systems may continue to associate the retired address with the former identity, cryptographic material, content, relationships, or deletion history. Reassigning the same visible address to a new identity would create ambiguity across the federation.
+
+For the Civic Infrastructure, deletion is therefore a permanent namespace event.
+
+Temporary loss of access, administrative review, suspension, blocking, or inactivity must not be implemented by deleting a channel when the identity is expected to remain logically continuous.
+
+---
+
+# 8. Civic requirement: reserved `sase*` participant namespace
+
+Within the `diagnostics.kane-il.us` Civic namespace, the prefix:
+
+```text
+sase*
+```
+
+has defined semantics.
+
+It identifies a service identity rooted in a completed SASE participation process.
+
+Examples include:
+
+```text
+sase25sep26a@diagnostics.kane-il.us
+sase25sep26a@witness.diagnostics.kane-il.us
+/home/sase25sep26a
+```
+
+The prefix is therefore not an ordinary nickname convention.
+
+It is a reserved Civic namespace.
+
+The governing rule is:
+
+> A `sase*` identifier is issued from an existing SASE-rooted participant record. It is not self-asserted.
+
+The same prefix may appear across:
+
+- Civic email,
+- Hubzilla/federated identity,
+- UNIX account naming,
+- DNS-related service references,
+- and other participant-facing Civic services.
+
+Where it appears, its meaning must remain predictable.
+
+The string itself is not independent proof of participation.
+
+The authoritative relationship remains the underlying participant record and the service that issued the identity.
+
+### Namespace abuse
+
+Attempts to claim, imitate, or misuse the reserved `sase*` namespace without corresponding participant provenance are treated as Civic identity-namespace abuse.
+
+The local policy response is immediate denial and banning.
+
+This is separate from ordinary moderation of arbitrary handles.
+
+The purpose is to preserve a stable semantic relationship between:
+
+```text
+SASE PARTICIPATION PROVENANCE
+        ↓
+CANONICAL PARTICIPANT ID
+        ↓
+PORTAL ACCOUNT
+        ↓
+sase* SERVICE IDENTITIES
+```
+
+The predictable behavior of the `sase*` prefix is therefore part of the Civic Infrastructure's identity discipline.
+
+---
+
+# 7. Civic requirement: bounded project surface
 
 A Civic project must be deliberately bounded.
 
@@ -254,7 +371,7 @@ Hubzilla is admitted because it can participate in enforcing that separation rat
 
 ---
 
-# 6. Civic requirement: participant continuity independent of one host
+# 8. Civic requirement: participant continuity independent of one host
 
 A Civic participant's identity and civic presence should not be conceptually identical to one particular machine.
 
@@ -290,7 +407,7 @@ Those should not be confused.
 
 ---
 
-# 7. Civic requirement: cloning and recoverability
+# 9. Civic requirement: cloning and recoverability
 
 Hubzilla allows a channel to be cloned to another Hubzilla hub.
 
@@ -316,7 +433,7 @@ That capability is sufficient to make cloning materially relevant to Civic Infra
 
 ---
 
-# 8. Civic requirement: reduce unnecessary operator dependence
+# 10. Civic requirement: reduce unnecessary operator dependence
 
 The Civic Infrastructure does not claim that Hubzilla prevents de-platforming, moderation, server failure, administrative error, or loss of access.
 
@@ -342,7 +459,7 @@ They do not eliminate every dependency.
 
 ---
 
-# 9. Civic requirement: extend function without creating a private platform fork
+# 11. Civic requirement: extend function without creating a private platform fork
 
 The Civic Infrastructure is intentionally kept small.
 
@@ -372,7 +489,7 @@ The value is that the Civic Infrastructure can add a bounded function without tu
 
 ---
 
-# 10. Civic requirement: interoperability without surrendering project boundaries
+# 12. Civic requirement: interoperability without surrendering project boundaries
 
 A bounded Civic project still needs controlled communication with the outside world.
 
@@ -410,7 +527,7 @@ ActivityPub or other federation support does not confer SASE participation, proj
 
 ---
 
-# 11. Civic requirement: rich and durable publication
+# 13. Civic requirement: rich and durable publication
 
 Civic activity cannot always be reduced to short posts, ephemeral chat, or simple email.
 
@@ -458,7 +575,7 @@ No one component is expected to perform every function.
 
 ---
 
-# 12. Civic requirement: permissions and relationship-aware access
+# 14. Civic requirement: permissions and relationship-aware access
 
 The Civic Infrastructure contains relationships that are not interchangeable.
 
@@ -487,7 +604,7 @@ Hubzilla permissions are one mechanism for enforcing the resulting access decisi
 
 ---
 
-# 13. Civic requirement: participant-owned publication surface
+# 15. Civic requirement: participant-owned publication surface
 
 An owner-operated Hubzilla node has another useful property: the publication surface can be hosted under infrastructure controlled by the participant or bounded group rather than solely under a third-party platform.
 
@@ -503,7 +620,7 @@ The value is operational control, not ideological decentralization.
 
 ---
 
-# 14. What Hubzilla is not
+# 16. What Hubzilla is not
 
 Hubzilla must not be allowed to redefine the Civic Infrastructure.
 
@@ -529,7 +646,7 @@ The application remains subordinate to the Civic Infrastructure's participation,
 
 ---
 
-# 15. Why Hubzilla is admitted
+# 17. Why Hubzilla is admitted
 
 Hubzilla is admitted because one platform provides a combination of capabilities that map directly to evidenced Civic Infrastructure needs:
 
@@ -551,7 +668,7 @@ The value is the combination.
 
 ---
 
-# 16. Owner-operator expansion model
+# 18. Owner-operator expansion model
 
 The Hubzilla role in Civic Infrastructure expansion is not:
 
@@ -592,7 +709,7 @@ It does, however, preserve a path for any qualified participant with sufficient 
 
 ---
 
-# 17. Technology neutrality remains intact
+# 19. Technology neutrality remains intact
 
 Hubzilla's admission is conditional on utility.
 
@@ -606,7 +723,7 @@ This is the same rule that governs blockchain, tokens, AI systems, distributed s
 
 ---
 
-# 18. Grant relevance
+# 20. Grant relevance
 
 Hubzilla demonstrates the technology-admission discipline in concrete form.
 
@@ -645,7 +762,7 @@ Hubzilla is therefore evidence of the Civic Infrastructure's selection disciplin
 
 ---
 
-# 19. Evidence boundary
+# 21. Evidence boundary
 
 This document distinguishes Hubzilla's documented capabilities from the verified state of the Kane deployment.
 

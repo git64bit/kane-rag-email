@@ -159,7 +159,7 @@ A visitor may submit a registration request and explain how and why they wish to
 
 A compatible request may be administratively approved as a provisional Hubzilla account.
 
-Provisional registrations remain disposable and are removed on the established recurring cleanup schedule when they are not backed by a valid new or existing SASE.
+Provisional registrations remain disposable and are removed unconditionally on the established recurring cleanup schedule.
 
 ### Participant Hubzilla enrollment
 

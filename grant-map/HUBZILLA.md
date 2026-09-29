@@ -6,7 +6,11 @@ This document explains why **Hubzilla** is admitted into the Civic Infrastructur
 
 Hubzilla is not the Civic Infrastructure itself.
 
-It is an admitted participant-facing publication, identity, interaction, and interoperability surface whose capabilities satisfy several evidenced Civic Infrastructure requirements at the same time.
+The Kane deployment at `witness.diagnostics.kane-il.us` is operated as a **Witness** node: a subject-matter research facility for examining civic experiences, developing attestation methods, preserving evidence and provenance, and making operational gaps visible.
+
+The Witness node does not exist to promote or demand changes to public policy or law. It supports research into how existing civic relationships, rules, institutions, and procedures operate in practice. Any later advocacy for change is separate from the infrastructure function.
+
+Hubzilla is an admitted participant-facing publication, identity, interaction, and interoperability surface whose capabilities satisfy several evidenced Civic Infrastructure requirements at the same time.
 
 The admission question is not:
 

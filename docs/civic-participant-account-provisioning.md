@@ -651,7 +651,9 @@ Every ordinary participant receives access to a real terminal session.
 
 Initially through Usermin Terminal.
 
-Potential future access may also include SSH or other standards-based terminal interfaces.
+Public SSH ingress is not part of the ordinary participant access model.
+
+Outbound SSH client connectivity is permitted from the participant UNIX environment and has been verified from the production participant account.
 
 ## Why
 
@@ -914,6 +916,8 @@ The following are provisioning failures:
 - private participant record written to public source control;
 - Usermin login not verified;
 - participant terminal unavailable where Terminal is part of the service;
+- public SSH ingress exposed contrary to the participant access boundary;
+- outbound SSH unavailable where the participant environment is expected to initiate permitted SSH connections;
 - general-purpose storage or hosting implicitly enabled contrary to the Civic account boundary.
 
 A participant UNIX account with no quota must be treated as **incomplete provisioning**, not as a valid ordinary Participant account.

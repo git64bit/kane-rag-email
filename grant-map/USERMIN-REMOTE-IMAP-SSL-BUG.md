@@ -1,6 +1,8 @@
 # Usermin remote IMAP SSL subfolder defect
 
-Status: reproduced on the operated Kane deployment and confirmed against current upstream source.
+Status: reproduced on the operated Kane deployment, confirmed against current upstream source, and submitted upstream as `webmin/usermin#139` on 2026-09-29.
+
+Upstream issue: https://github.com/webmin/usermin/issues/139
 
 This document is written so it can be used directly as an upstream Usermin bug report.
 
@@ -168,23 +170,32 @@ If the Inbox object can carry an explicit port, inheriting that port may also be
 
 ## Kane deployment decision
 
-The operated Kane node remains on the standard packaged Usermin source. A temporary local source modification was used only to confirm the suspected missing property and was then reverted.
-
 The mail server will **not** enable plain IMAP/143 merely to accommodate this client-side behavior.
 
-Current known-good state:
+A minimal local compatibility patch is currently applied on the operated Usermin node:
+
+```perl
+'ssl' => $rv[0]->{'ssl'},
+```
+
+The patch was first used to test the suspected cause. It was retained after the test because it restored the expected behavior without weakening the IMAP transport policy.
+
+Verified current behavior:
 
 ```text
 Usermin -> Remote IMAPS -> mail1:993 -> Inbox works
+Usermin -> Remote IMAPS -> mail1:993 -> Sent works
+Usermin -> Remote IMAPS -> mail1:993 -> Drafts works
 ```
 
-Known limitation:
+The local modification is intentionally narrow and remains tracked as a compatibility patch pending upstream resolution.
+
+Upstream tracking:
 
 ```text
-Drafts / Sent / other auto-discovered folders
-    -> Usermin drops SSL state
-    -> attempts port 143
-    -> connection refused
+webmin/usermin#139
+https://github.com/webmin/usermin/issues/139
+status: open as of 2026-09-29
 ```
 
-No production workaround is accepted until it either uses supported Usermin configuration or the upstream defect is corrected.
+If upstream incorporates a fix, the local patch should be removed and the packaged/upstream implementation retested before the issue is considered closed for Kane.

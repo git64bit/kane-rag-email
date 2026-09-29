@@ -97,6 +97,24 @@ Public access is hostname-based because TLS, DANE and Civic Trust Enrollment are
 
 A participant at a public library should not need to know any LAN or WireGuard address.
 
+### Participant SSH directionality
+
+Verified behavior:
+
+```text
+SSH ingress
+    public witness path: not exposed on TCP/22
+
+SSH egress
+    participant UNIX account: permitted
+```
+
+The public witness ingress address refused TCP/22 during verification.
+
+Outbound SSH was tested from the production participant UNIX account on `witness-hubzilla` against GitHub's SSH service. The connection reached the remote SSH service and failed only at public-key authentication, confirming outbound SSH transport.
+
+SSH therefore remains a participant-side client capability, not a public participant login surface.
+
 ## 5. Human management is part of host identity
 
 For operator-facing infrastructure, an IP address without its management service is incomplete documentation.

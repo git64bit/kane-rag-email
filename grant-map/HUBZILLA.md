@@ -143,7 +143,7 @@ It creates an operational role.
 
 ---
 
-# 4. Civic requirement: provisional intake before participation
+# 4. Civic requirement: provisional intake and participant service enrollment
 
 Hubzilla is the public registration and provisional intake surface for the Kane Civic Infrastructure.
 
@@ -151,41 +151,70 @@ Registration is approval-only.
 
 A registration request does not by itself create a Civic participant.
 
-The onboarding states are:
+There are two related but distinct uses of the same registration surface.
+
+### Provisional registration
+
+A visitor may submit a registration request and explain how and why they wish to participate.
+
+A compatible request may be administratively approved as a provisional Hubzilla account.
+
+Provisional registrations remain disposable and are removed on the established recurring cleanup schedule when they are not backed by a valid new or existing SASE.
+
+### Participant Hubzilla enrollment
+
+A person who has already completed the SASE process and received the durable Portal participant account may register the corresponding `sase*` Hubzilla service identity.
+
+The Hubzilla service identity is rooted in the existing participant environment. It does not create participation by itself.
+
+The observed production enrollment sequence is:
 
 ```text
-VISITOR
-    ↓
-REGISTRATION REQUEST
-    ↓
-ADMINISTRATIVE APPROVAL
-    ↓
-PROVISIONAL HUBZILLA ACCOUNT
-    ↓
-VALID NEW OR EXISTING SASE
-    ↓
-PROJECT QUALIFICATION
-    ↓
-CIVIC PARTICIPANT
-    ↓
-USERMIN + PARTICIPANT RESOURCES
+PORTAL PARTICIPANT ACCOUNT
+        ↓
+HUBZILLA REGISTRATION REQUEST
+        ↓
+VERIFICATION EMAIL TO CIVIC MAILBOX
+        ↓
+PARTICIPANT VERIFIES MAILBOX CONTROL
+        ↓
+VERIFIED REGISTRATION WAITING FOR APPROVAL
+        ↓
+SITE ADMIN APPROVES
+        ↓
+HUBZILLA ACCOUNT / CHANNEL ADMITTED
 ```
 
-The registration form asks the applicant to explain why and how they wish to participate.
+Email verification and Site Admin approval are independent gates.
 
-That statement of intent supports review of the registration request but does not replace the SASE participation gate.
+The production deployment has verified the following behavior:
 
-Approved Hubzilla registrations remain provisional until backed by a valid new or existing SASE.
+- completion of email verification does not permit login while Site Admin approval is still pending;
+- the Site Admin interface distinguishes all registrations from verified registrations waiting for approval;
+- after email verification, the request appears in the verified-registration queue;
+- Site Admin approval admits the account after the verification requirement has been satisfied.
 
-Provisional registrations without a valid SASE are removed on the established recurring cleanup schedule.
+The participant-facing verification screen confirms successful verification while separately stating that administrator approval is still required before login.
 
-Hubzilla therefore performs intake and provisional presence.
+This creates an observable service-enrollment loop between Hubzilla and the participant's Civic mailbox.
+
+### Notification wording TODO
+
+After participant verification, Hubzilla sends the Site Admin a notification that currently describes the event as a generic "new user registration request."
+
+In the verified-registration state, that wording is incomplete.
+
+The notification should later make clear that the request has already been **email verified** and is now waiting for Site Admin approval.
+
+This is a presentation and operational-clarity issue. It does not change the verified two-gate enrollment behavior.
+
+Hubzilla therefore performs provisional intake and participant-facing service enrollment.
 
 SASE establishes deliberate participation.
 
-Project qualification establishes eligibility.
+The Portal account is the durable participant anchor.
 
-Usermin issuance allocates the participant's deeper Civic resources.
+Hubzilla admission is a service enrollment derived from that existing participant relationship.
 
 These functions are deliberately separate.
 
